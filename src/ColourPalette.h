@@ -10,7 +10,6 @@
 
 #include "ofMain.h"
 
-
 template<class SubClass>
 
 class ColourPalette {
