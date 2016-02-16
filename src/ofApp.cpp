@@ -5,7 +5,8 @@ void ofApp::setup(){
   ofBackground(255);
   ofColor col = ofColor(255, 0, 0);
 
-  cols = anal.createPalette(col);
+  // cols = anal.createPalette(col);
+  cols = mono.createPalette(col);
 
 }
 

@@ -2,6 +2,7 @@
 
 #include "ofMain.h"
 #include "AnalogousPalette.h"
+#include "MonochromePalette.h"
 
 class ofApp : public ofBaseApp{
 
@@ -22,6 +23,7 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
-    AnalogousPalette anal;
+    MonochromePalette mono;
+
     vector<ofColor> cols;
 };
