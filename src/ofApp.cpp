@@ -7,7 +7,6 @@ void ofApp::setup(){
 
   // cols = anal.createPalette(col);
   cols = mono.createPalette(col);
-
 }
 
 //--------------------------------------------------------------
@@ -17,8 +16,8 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-  for(int i=0; i<cols.size(); i++) {
-    ofSetColor(cols[i]);
+  for(int i=0; i<cols->size(); i++) {
+    ofSetColor(cols->at(i));
     ofDrawEllipse(10, (i+1)*20, 20, 20);
   }
 }

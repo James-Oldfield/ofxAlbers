@@ -79,7 +79,7 @@ flags = [
     '-I/Users/james/DEV/openFrameworks/libs/utf8cpp/include',
     '-I/Users/james/DEV/openFrameworks/libs/utf8cpp/include/utf8',
     '-Wall',
-    '-std=c++11',
+    '-std=c++14',
 ]
 
 

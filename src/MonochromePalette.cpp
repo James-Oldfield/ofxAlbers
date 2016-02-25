@@ -1,6 +1,6 @@
 #include "MonochromePalette.h"
 
-vector<ofColor> & MonochromePalette::createPalette(const ofColor & seedColour) {
+shared_ptr<vector<ofColor>> MonochromePalette::createPalette(const ofColor & seedColour) {
   vector<ofVec2f> satBri; //!< stores the saturation and brightness.
   float hue = seedColour.getHue(); //!< stores the hue value of the seed colour.
   float sat = seedColour.getSaturation(); //!< stores the sat of seed colour.
@@ -15,7 +15,7 @@ vector<ofColor> & MonochromePalette::createPalette(const ofColor & seedColour) {
 
   for(const auto sb : satBri) {
     ofColor c = ofColor::fromHsb(hue, sb.x, sb.y);
-    colours.push_back(c);
+    colours->push_back(c);
   }
 
   return colours;

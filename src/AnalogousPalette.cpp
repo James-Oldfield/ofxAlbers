@@ -1,6 +1,6 @@
 #include "AnalogousPalette.h"
 
-vector<ofColor> & AnalogousPalette::createPalette(const ofColor & seedColour) {
+shared_ptr<vector<ofColor>> AnalogousPalette::createPalette(const ofColor & seedColour) {
   vector<float> hues; //!< stores the hue values
   float ang = seedColour.getHueAngle(); //!< hue angle of the seed colour
 
@@ -15,7 +15,7 @@ vector<ofColor> & AnalogousPalette::createPalette(const ofColor & seedColour) {
 
   for(const auto h : hues) {
     ofColor c = ofColor::fromHsb(h, s, b);
-    colours.push_back(c);
+    colours->push_back(c);
   }
 
   return colours;

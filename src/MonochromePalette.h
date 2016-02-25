@@ -20,7 +20,7 @@ class MonochromePalette: public ColourPalette<MonochromePalette> {
      * @brief Main method for creating monochrome colour schemes from a seed colour.
      * @return A pointer to the colour scheme.
      */
-    vector<ofColor> & createPalette(const ofColor & seedColour);
+    shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
     MonochromePalette test();
 
     /**

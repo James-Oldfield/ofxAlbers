@@ -21,7 +21,7 @@ class AnalogousPalette: public ColourPalette<AnalogousPalette> {
      * @brief Main method for creating analogous colour schemes from a seed colour.
      * @return A pointer to the colour scheme.
      */
-    vector<ofColor> & createPalette(const ofColor & seedColour);
+    shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
     AnalogousPalette test();
 
     /**

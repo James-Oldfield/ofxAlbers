@@ -24,6 +24,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     MonochromePalette mono;
+    AnalogousPalette anal;
 
-    vector<ofColor> cols;
+    shared_ptr<vector<ofColor>> cols;
 };
