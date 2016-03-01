@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include "AnalogousPalette.h"
 #include "MonochromePalette.h"
+#include "TriadPalette.h"
 
 class ofApp : public ofBaseApp{
 
@@ -25,6 +26,7 @@ class ofApp : public ofBaseApp{
 
     MonochromePalette mono;
     AnalogousPalette anal;
+    TriadPalette triad;
 
     bool flag = false;
 

@@ -4,9 +4,11 @@
 void ofApp::setup(){
   ofBackground(255);
 
+  ofColor r = ofColor(255, 100, 100);
   ofColor g = ofColor(0, 255, 0);
   ofColor b = ofColor(0, 0, 255);
 
+  triad.createPalette(r);
   anal.createPalette(g);
   mono.createPalette(b);
 }
@@ -14,7 +16,7 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
   if(flag)
-    cols = anal.getPalette();
+    cols = triad.getPalette();
   else
     cols = mono.getPalette();
 }
