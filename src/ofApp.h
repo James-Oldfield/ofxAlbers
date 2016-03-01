@@ -26,5 +26,7 @@ class ofApp : public ofBaseApp{
     MonochromePalette mono;
     AnalogousPalette anal;
 
+    bool flag = false;
+
     shared_ptr<vector<ofColor>> cols;
 };

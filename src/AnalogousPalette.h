@@ -10,7 +10,7 @@
 #include "ofMain.h"
 #include "ColourPalette.h"
 
-class AnalogousPalette: public ColourPalette<AnalogousPalette> {
+class AnalogousPalette: public ColourPalette {
   private:
     int angDif; //!< difference between the angles in the colour scheme.
     int b;      //!< brightness of the colour
@@ -22,7 +22,6 @@ class AnalogousPalette: public ColourPalette<AnalogousPalette> {
      * @return A pointer to the colour scheme.
      */
     shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
-    AnalogousPalette test();
 
     /**
      * @brief Construct an Analogous Palette object and set relevant vars.

@@ -10,7 +10,7 @@
 #include "ofMain.h"
 #include "ColourPalette.h"
 
-class MonochromePalette: public ColourPalette<MonochromePalette> {
+class MonochromePalette: public ColourPalette {
   private:
     int satDif; //!< difference between the Saturation of the colours.
     int briDif; //!< difference between the Brightness of the colours.
@@ -21,7 +21,6 @@ class MonochromePalette: public ColourPalette<MonochromePalette> {
      * @return A pointer to the colour scheme.
      */
     shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
-    MonochromePalette test();
 
     /**
      * @brief Construct a Monochrome Palette object and set relevant vars.

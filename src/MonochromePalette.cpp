@@ -21,9 +21,5 @@ shared_ptr<vector<ofColor>> MonochromePalette::createPalette(const ofColor & see
   return colours;
 }
 
-MonochromePalette MonochromePalette::test() { cout << "test func" << endl; 
-  return *this;
-}
-
 MonochromePalette::MonochromePalette(int _satDif, int _briDif): satDif(_satDif), briDif(_briDif) {};
 MonochromePalette::~MonochromePalette() { cout << "destructor" << endl; };

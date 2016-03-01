@@ -3,15 +3,20 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
   ofBackground(255);
-  ofColor col = ofColor(255, 0, 0);
 
-  // cols = anal.createPalette(col);
-  cols = mono.createPalette(col);
+  ofColor g = ofColor(0, 255, 0);
+  ofColor b = ofColor(0, 0, 255);
+
+  anal.createPalette(g);
+  mono.createPalette(b);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-  
+  if(flag)
+    cols = anal.getPalette();
+  else
+    cols = mono.getPalette();
 }
 
 //--------------------------------------------------------------
@@ -24,7 +29,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+  flag =! flag;  
 }
 
 //--------------------------------------------------------------

@@ -21,10 +21,5 @@ shared_ptr<vector<ofColor>> AnalogousPalette::createPalette(const ofColor & seed
   return colours;
 }
 
-
-AnalogousPalette AnalogousPalette::test() { cout << "test func" << endl; 
-  return *this;
-}
-
 AnalogousPalette::AnalogousPalette(int _angDif, int _b, int _s): angDif(_angDif), b(_b), s(_s) {};
 AnalogousPalette::~AnalogousPalette() { cout << "destructor" << endl; };
