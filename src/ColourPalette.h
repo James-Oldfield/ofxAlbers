@@ -11,7 +11,6 @@
 
 class ColourPalette {
   protected:
-
     /**
      * @brief Abstract virtual class which provides the interface to creating a colour scheme from a seed colour.
      * @return a unique_ptr to the object itself.
@@ -20,6 +19,7 @@ class ColourPalette {
 
   public:
     shared_ptr<vector<ofColor>> colours; //!< stores the of representation of the generated colours.
+
     virtual ~ColourPalette() {};
 
     /**
@@ -34,6 +34,14 @@ class ColourPalette {
      * as we don't want it to point to the previous instantiation's 'colours'.
      */
     ColourPalette(const ColourPalette & old): colours(make_shared<vector<ofColor>>(*old.colours)) {}
+
+    /**
+     * @brief ABS's assignment operator. Creates a 'unique' shared pointer from the old one
+     * as we don't want it to point to the previous instantiation's 'colours'.
+     */
+    void operator = (const ColourPalette & old) {
+      colours = make_shared<vector<ofColor>>(*old.colours);
+    }
 
     /**
      * @brief Generic colour scheme getter. Returns a shared pointer to the colour scheme itself.

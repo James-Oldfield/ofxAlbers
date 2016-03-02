@@ -8,17 +8,14 @@ void ofApp::setup(){
   ofColor g = ofColor(0, 255, 0);
   ofColor b = ofColor(0, 0, 255);
   
-  triad.createPalette(r);
-  anal.createPalette(g);
+  //triad.createPalette(r);
+  // anal.createPalette(g);
   mono.createPalette(b);
+  newMono.createPalette(g);
 
-  MonochromePalette newMono(mono);
+  newMono = mono;
+
   cols = newMono.getPalette();
-  mono.test();
-
-  cout << "mono " << mono.colours << endl;
-  cout << "new mono " << newMono.colours << endl;
-  cout << "new mono size " << newMono.colours->size() << endl;
 }
 
 //--------------------------------------------------------------
@@ -27,6 +24,7 @@ void ofApp::update(){
     cols = mono.getPalette();
   }
   else {
+    cols = newMono.getPalette();
   }
 }
 

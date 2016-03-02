@@ -25,6 +25,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     MonochromePalette mono;
+    MonochromePalette newMono;
     AnalogousPalette anal;
     TriadPalette triad;
 
