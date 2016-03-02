@@ -32,6 +32,9 @@ class AnalogousPalette: public ColourPalette {
      */
     AnalogousPalette(int _angDif = 15, int _b = 255, int _s = 255);
     ~AnalogousPalette();
+
+    AnalogousPalette(const AnalogousPalette & old);
+
 };
 
 #endif /* defined(____AnalogousPalette__) */

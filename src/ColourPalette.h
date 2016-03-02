@@ -1,7 +1,6 @@
 /**
  * @class ColourPalette
  * @brief A high-level abstract base class representing a colour palette.
- * @tparam Subclass The Derived class
  * @author James Oldfield.
  */
 
@@ -12,7 +11,6 @@
 
 class ColourPalette {
   protected:
-    shared_ptr<vector<ofColor>> colours{new vector<ofColor>()}; //!< stores the of representation of the generated colours.
 
     /**
      * @brief Abstract virtual class which provides the interface to creating a colour scheme from a seed colour.
@@ -21,7 +19,21 @@ class ColourPalette {
     virtual shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour) = 0;
 
   public:
+    shared_ptr<vector<ofColor>> colours; //!< stores the of representation of the generated colours.
     virtual ~ColourPalette() {};
+
+    /**
+     * @brief Constructor used to instantiate member objects, viz. 'colours'.
+     */
+    ColourPalette() {
+      colours = make_shared<vector<ofColor>>();
+    };
+
+    /**
+     * @brief ABS's copy constructor. Creates a 'unique' shared pointer from the old one
+     * as we don't want it to point to the previous instantiation's 'colours'.
+     */
+    ColourPalette(const ColourPalette & old): colours(make_shared<vector<ofColor>>(*old.colours)) {}
 
     /**
      * @brief Generic colour scheme getter. Returns a shared pointer to the colour scheme itself.

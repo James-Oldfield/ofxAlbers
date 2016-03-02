@@ -7,18 +7,27 @@ void ofApp::setup(){
   ofColor r = ofColor(255, 100, 100);
   ofColor g = ofColor(0, 255, 0);
   ofColor b = ofColor(0, 0, 255);
-
+  
   triad.createPalette(r);
   anal.createPalette(g);
   mono.createPalette(b);
+
+  MonochromePalette newMono(mono);
+  cols = newMono.getPalette();
+  mono.test();
+
+  cout << "mono " << mono.colours << endl;
+  cout << "new mono " << newMono.colours << endl;
+  cout << "new mono size " << newMono.colours->size() << endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-  if(flag)
-    cols = triad.getPalette();
-  else
+  if(flag) {
     cols = mono.getPalette();
+  }
+  else {
+  }
 }
 
 //--------------------------------------------------------------

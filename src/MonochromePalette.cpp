@@ -21,5 +21,14 @@ shared_ptr<vector<ofColor>> MonochromePalette::createPalette(const ofColor & see
   return colours;
 }
 
-MonochromePalette::MonochromePalette(int _satDif, int _briDif): satDif(_satDif), briDif(_briDif) {};
+MonochromePalette::MonochromePalette(int _satDif, int _briDif): ColourPalette(), satDif(_satDif), briDif(_briDif) {};
 MonochromePalette::~MonochromePalette() { cout << "destructor" << endl; };
+
+  /**
+   * @brief MonochromePalette's copy constructor. Creates a 'unique' shared pointer from the old one
+   * as we don't want it to point to the previous instantiation's 'colours'.
+   */
+MonochromePalette::MonochromePalette(const MonochromePalette & old) {
+  colours = make_shared<vector<ofColor>>(*old.colours);
+}
+

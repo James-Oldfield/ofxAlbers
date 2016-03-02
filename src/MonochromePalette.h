@@ -30,6 +30,12 @@ class MonochromePalette: public ColourPalette {
      */
     MonochromePalette(int _satDif = 15, int _briDif = 15);
     ~MonochromePalette();
+
+    MonochromePalette(const MonochromePalette & old);
+
+    void test() {
+      colours->at(0) = ofColor(0,0,0);
+    }
 };
 
 #endif /* defined(____MonochromePalette__) */

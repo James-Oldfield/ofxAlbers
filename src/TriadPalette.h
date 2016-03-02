@@ -25,6 +25,8 @@ class TriadPalette: public ColourPalette {
      */
     TriadPalette();
     ~TriadPalette();
+
+    TriadPalette(const TriadPalette & old);
 };
 
 #endif /* defined(____TriadPalette__) */

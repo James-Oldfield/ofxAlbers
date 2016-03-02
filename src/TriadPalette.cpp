@@ -30,5 +30,14 @@ shared_ptr<vector<ofColor>> TriadPalette::createPalette(const ofColor & seedColo
   return colours;
 }
 
-TriadPalette::TriadPalette() {};
+TriadPalette::TriadPalette(): ColourPalette() {};
 TriadPalette::~TriadPalette() { cout << "destructor" << endl; };
+
+
+  /**
+   * @brief TriadPalette's copy constructor. Creates a 'unique' shared pointer from the old one
+   * as we don't want it to point to the previous instantiation's 'colours'.
+   */
+TriadPalette::TriadPalette(const TriadPalette & old) {
+  colours = make_shared<vector<ofColor>>(*old.colours);
+}

@@ -21,5 +21,13 @@ shared_ptr<vector<ofColor>> AnalogousPalette::createPalette(const ofColor & seed
   return colours;
 }
 
-AnalogousPalette::AnalogousPalette(int _angDif, int _b, int _s): angDif(_angDif), b(_b), s(_s) {};
-AnalogousPalette::~AnalogousPalette() { cout << "destructor" << endl; };
+AnalogousPalette::AnalogousPalette(int _angDif, int _b, int _s): ColourPalette(), angDif(_angDif), b(_b), s(_s) {};
+AnalogousPalette::~AnalogousPalette() {};
+
+  /**
+   * @brief AnalogousPalette's copy constructor. Creates a 'unique' shared pointer from the old one
+   * as we don't want it to point to the previous instantiation's 'colours'.
+   */
+AnalogousPalette::AnalogousPalette(const AnalogousPalette & old) {
+  colours = make_shared<vector<ofColor>>(*old.colours);
+}
