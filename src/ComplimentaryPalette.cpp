@@ -3,8 +3,8 @@
 SharedPtrColVec ComplimentaryPalette::createPalette(const ofColor & _seedColour) {
   seedColour = _seedColour;
 
-  vector<float> hues; //!< stores the hue values
-  float ang = seedColour.getHueAngle(); //!< hue angle of the seed colour
+  vector<float> hues; // stores the hue values
+  float ang = seedColour.getHueAngle(); // hue angle of the seed colour
   float s = seedColour.getSaturation();
   float b = seedColour.getBrightness();
 

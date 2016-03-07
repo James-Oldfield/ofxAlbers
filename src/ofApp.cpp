@@ -9,24 +9,11 @@ void ofApp::setup(){
   ofColor b = ofColor(0, 0, 255);
   
   //triad.createPalette(r);
-  // anal.createPalette(g);
-  anal.generateRandom();
-  mono.generateRandom();
-  newMono.generateRandom();
-
-  newMono = mono;
-
-  cols = newMono.getPalette();
+  cols = anal.createPalette(g);
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
-  if(flag) {
-    cols = anal.getPalette();
-  }
-  else {
-    cols = anal.getPalette();
-  }
 }
 
 //--------------------------------------------------------------
@@ -39,7 +26,9 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-  ColourPalette::adjustHue( cols->at(3), 10 );
+  int rand = ofRandom(100);
+  cout << "ran num " << rand << endl;
+  anal.setAngleDif(rand);
 }
 
 //--------------------------------------------------------------

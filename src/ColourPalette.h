@@ -18,6 +18,7 @@ class ColourPalette {
 
     /**
      * @brief Abstract virtual class which provides the interface to creating a colour scheme from a seed colour.
+     * @param _seedColour The ofColor seed/base colour with which to construct the palette from.
      * @return a shared_ptr to the colour scheme vector.
      */
     virtual SharedPtrColVec createPalette(const ofColor & _seedColour) = 0;
@@ -74,9 +75,9 @@ class ColourPalette {
      */
     SharedPtrColVec generateRandom();
 
-    /********************************************//**
-     *      STATIC COLOUR OPERATION FUNCTIONS
-     ***********************************************/
+    /**
+     * STATIC COLOUR OPERATION FUNCTIONS
+     */
 
     /**
      * @brief Used to darken a colour by a given percentage.
