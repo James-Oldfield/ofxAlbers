@@ -1,6 +1,8 @@
 #include "MonochromePalette.h"
 
-shared_ptr<vector<ofColor>> MonochromePalette::createPalette(const ofColor & seedColour) {
+SharedPtrColVec MonochromePalette::createPalette(const ofColor & _seedColour) {
+  seedColour = _seedColour;
+
   vector<ofVec2f> satBri; //!< stores the saturation and brightness.
   float hue = seedColour.getHue(); //!< stores the hue value of the seed colour.
   float sat = seedColour.getSaturation(); //!< stores the sat of seed colour.
@@ -29,6 +31,6 @@ MonochromePalette::~MonochromePalette() { cout << "destructor" << endl; };
    * as we don't want it to point to the previous instantiation's 'colours'.
    */
 MonochromePalette::MonochromePalette(const MonochromePalette & old) {
-  colours = make_shared<vector<ofColor>>(*old.colours);
+  colours = make_shared<ColVec>(*old.colours);
 }
 

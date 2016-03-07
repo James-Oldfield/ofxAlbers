@@ -18,7 +18,7 @@ class ComplimentaryPalette: public ColourPalette {
      * @brief Main method for creating Complimentary colour schemes from a seed colour.
      * @return A pointer to the colour scheme.
      */
-    shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
+    SharedPtrColVec createPalette(const ofColor & _seedColour);
 
     /**
      * @brief Construct an Complimentary Palette object and set relevant vars.

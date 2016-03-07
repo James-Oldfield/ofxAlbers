@@ -1,6 +1,8 @@
 #include "TriadPalette.h"
 
-shared_ptr<vector<ofColor>> TriadPalette::createPalette(const ofColor & seedColour) {
+SharedPtrColVec TriadPalette::createPalette(const ofColor & _seedColour) {
+  seedColour = _seedColour;
+
   vector<float> hues; //!< stores the hue values
   float ang = seedColour.getHueAngle(); //!< hue angle of the seed colour
   float s = seedColour.getSaturation();
@@ -39,5 +41,5 @@ TriadPalette::~TriadPalette() { cout << "destructor" << endl; };
    * as we don't want it to point to the previous instantiation's 'colours'.
    */
 TriadPalette::TriadPalette(const TriadPalette & old) {
-  colours = make_shared<vector<ofColor>>(*old.colours);
+  colours = make_shared<ColVec>(*old.colours);
 }

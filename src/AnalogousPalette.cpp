@@ -1,6 +1,8 @@
 #include "AnalogousPalette.h"
 
-shared_ptr<vector<ofColor>> AnalogousPalette::createPalette(const ofColor & seedColour) {
+SharedPtrColVec AnalogousPalette::createPalette(const ofColor & _seedColour) {
+  seedColour = _seedColour;
+
   vector<float> hues; //!< stores the hue values
   float ang = seedColour.getHueAngle(); //!< hue angle of the seed colour
 
@@ -29,5 +31,5 @@ AnalogousPalette::~AnalogousPalette() {};
    * as we don't want it to point to the previous instantiation's 'colours'.
    */
 AnalogousPalette::AnalogousPalette(const AnalogousPalette & old) {
-  colours = make_shared<vector<ofColor>>(*old.colours);
+  colours = make_shared<ColVec>(*old.colours);
 }

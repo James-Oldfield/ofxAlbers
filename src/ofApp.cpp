@@ -10,8 +10,9 @@ void ofApp::setup(){
   
   //triad.createPalette(r);
   // anal.createPalette(g);
-  mono.createPalette(b);
-  newMono.createPalette(g);
+  anal.generateRandom();
+  mono.generateRandom();
+  newMono.generateRandom();
 
   newMono = mono;
 
@@ -21,10 +22,10 @@ void ofApp::setup(){
 //--------------------------------------------------------------
 void ofApp::update(){
   if(flag) {
-    cols = mono.getPalette();
+    cols = anal.getPalette();
   }
   else {
-    cols = newMono.getPalette();
+    cols = anal.getPalette();
   }
 }
 
@@ -38,7 +39,7 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-  flag =! flag;  
+  ColourPalette::adjustHue( cols->at(3), 10 );
 }
 
 //--------------------------------------------------------------

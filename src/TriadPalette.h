@@ -18,7 +18,7 @@ class TriadPalette: public ColourPalette {
      * @brief Main method for creating Triad colour schemes from a seed colour.
      * @return A pointer to the colour scheme.
      */
-    shared_ptr<vector<ofColor>> createPalette(const ofColor & seedColour);
+    SharedPtrColVec createPalette(const ofColor & _seedColour);
 
     /**
      * @brief Construct an Triad Palette object and set relevant vars.

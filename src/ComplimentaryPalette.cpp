@@ -1,6 +1,8 @@
 #include "ComplimentaryPalette.h"
 
-shared_ptr<vector<ofColor>> ComplimentaryPalette::createPalette(const ofColor & seedColour) {
+SharedPtrColVec ComplimentaryPalette::createPalette(const ofColor & _seedColour) {
+  seedColour = _seedColour;
+
   vector<float> hues; //!< stores the hue values
   float ang = seedColour.getHueAngle(); //!< hue angle of the seed colour
   float s = seedColour.getSaturation();
@@ -29,5 +31,5 @@ ComplimentaryPalette::~ComplimentaryPalette() {};
    * as we don't want it to point to the previous instantiation's 'colours'.
    */
 ComplimentaryPalette::ComplimentaryPalette(const ComplimentaryPalette & old) {
-  colours = make_shared<vector<ofColor>>(*old.colours);
+  colours = make_shared<ColVec>(*old.colours);
 }
