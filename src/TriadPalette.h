@@ -1,6 +1,6 @@
 /**
  * @class TriadPalette
- * @brief Represents a Triadic colour scheme.
+ * @brief Functionality for constructing and manipulating Triadic colour schemes.
  * @author James Oldfield.
  */
 

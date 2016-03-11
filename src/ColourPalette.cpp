@@ -1,5 +1,34 @@
 #include "ColourPalette.h"
 
+void ColourPalette::darken(unsigned int percent) {
+  for(auto & c : *colours)
+    darken(c, percent);
+}
+
+void ColourPalette::lighten(unsigned int percent) {
+  for(auto & c : *colours)
+    lighten(c, percent);
+}
+
+void ColourPalette::saturate(unsigned int percent) {
+  for(auto & c : *colours)
+    saturate(c, percent);
+}
+
+void ColourPalette::desaturate(unsigned int percent) {
+  for(auto & c : *colours)
+    desaturate(c, percent);
+}
+
+void ColourPalette::adjustHue(int percent) {
+  for(auto & c : *colours)
+    adjustHue(c, percent);
+}
+
+/**
+ * STATIC COLOUR OPERATION FUNCTIONS
+ */
+
 ofColor ColourPalette::darken(ofColor & col, unsigned int percent) {
   float oldBri = col.getBrightness();
   col.setBrightness( ofClamp( oldBri - ( oldBri * ( percent * .01 ) ), 0, 255 ) );

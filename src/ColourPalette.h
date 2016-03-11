@@ -76,6 +76,36 @@ class ColourPalette {
     SharedPtrColVec generateRandom();
 
     /**
+    * @brief Used to darken a colour scheme by a given percentage.
+    * @param percent The percentage with which to change the colour by.
+    */
+    void darken(unsigned int percent);
+
+    /**
+    * @brief Used to lighten a colour scheme by a given percentage.
+    * @param percent The percentage with which to change the colour by.
+    */
+    void lighten(unsigned int percent);
+
+    /**
+    * @brief Used to saturate a colour scheme by a given percentage.
+    * @param percent The percentage with which to change the colour by.
+    */
+    void saturate(unsigned int percent);
+
+    /**
+    * @brief Used to desaturate a colour scheme by a given percentage.
+    * @param percent The percentage with which to change the colour by.
+    */
+    void desaturate(unsigned int percent);
+
+    /**
+    * @brief Used to adjust the hue by a given percentage - n.b. can be a negative value.
+    * @param percent The percentage with which to change the colour by.
+    */
+    void adjustHue(int percent);
+
+    /**
      * STATIC COLOUR OPERATION FUNCTIONS
      */
 

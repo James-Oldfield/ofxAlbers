@@ -1,6 +1,6 @@
 /**
  * @class ComplimentaryPalette
- * @brief Represents a Complimentaryic colour scheme.
+ * @brief Functionality for constructing and manipulating Complimentary colour schemes.
  * @author James Oldfield.
  */
 

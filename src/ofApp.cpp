@@ -27,8 +27,8 @@ void ofApp::draw(){
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
   int rand = ofRandom(100);
-  cout << "ran num " << rand << endl;
-  anal.setAngleDif(rand);
+  // ColourPalette::darken(cols->at(0), 10);
+  anal.adjustHue(rand);
 }
 
 //--------------------------------------------------------------

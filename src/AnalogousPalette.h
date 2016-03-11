@@ -1,6 +1,6 @@
 /**
  * @class AnalogousPalette
- * @brief A high-level abstract base class representing a colour palette.
+ * @brief Functionality for constructing and manipulating Analogous colour schemes.
  * @author James Oldfield.
  */
 
