@@ -1,6 +1,6 @@
 /**
  * @class AnalogousPalette
- * @brief Functionality for constructing and manipulating Analogous colour schemes.
+ * @brief A high-level abstract base class representing a colour palette.
  * @author James Oldfield.
  */
 
@@ -8,9 +8,9 @@
 #define ____AnalogousPalette__
 
 #include "ofMain.h"
-#include "ColourPalette.h"
+#include "TheoryPalette.h"
 
-class AnalogousPalette: public ColourPalette {
+class AnalogousPalette: public TheoryPalette {
   private:
     int angDif; //!< difference between the hue values, angle-wise, in the colour scheme.
     int b;      //!< brightness of the colour

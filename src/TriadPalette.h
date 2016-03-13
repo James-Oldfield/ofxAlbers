@@ -8,9 +8,9 @@
 #define ____TriadPalette__
 
 #include "ofMain.h"
-#include "ColourPalette.h"
+#include "TheoryPalette.h"
 
-class TriadPalette: public ColourPalette {
+class TriadPalette: public TheoryPalette {
   private:
   public:
 

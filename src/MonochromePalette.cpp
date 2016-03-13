@@ -36,7 +36,7 @@ void MonochromePalette::setBrightnessDif(const int & _briDif) {
   this->createPalette(seedColour);
 }
 
-MonochromePalette::MonochromePalette(int _satDif, int _briDif): ColourPalette(), satDif(_satDif), briDif(_briDif) {};
+MonochromePalette::MonochromePalette(int _satDif, int _briDif): TheoryPalette(), satDif(_satDif), briDif(_briDif) {};
 MonochromePalette::~MonochromePalette() { cout << "destructor" << endl; };
 
   /**

@@ -1,20 +1,17 @@
 /**
- * @class ColourPalette
+ * @class TheoryPalette
  * @brief A high-level abstract base class representing a colour palette based on colour theory.
  * @author James Oldfield.
  */
 
-#ifndef ____ColourPalette__
-#define ____ColourPalette__
+#ifndef ____TheoryPalette__
+#define ____TheoryPalette__
 
 #include "ofMain.h"
+#include "ColourPalette.h"
 
-using ColVec = vector<ofColor>;
-using SharedPtrColVec = shared_ptr<ColVec>;
-
-class ColourPalette {
+class TheoryPalette : public ColourPalette {
   protected:
-    SharedPtrColVec colours; //!< stores the of representation of the generated colours.
     ofColor seedColour = ofColor(255, 255, 255); //!< the base colour with which to generate a scheme from.
 
     /**
@@ -25,26 +22,18 @@ class ColourPalette {
     virtual SharedPtrColVec createPalette(const ofColor & _seedColour) = 0;
 
   public:
-    virtual ~ColourPalette() {};
+    virtual ~TheoryPalette() {};
 
     /**
      * @brief Constructor used to instantiate member objects, viz. 'colours'.
      */
-    ColourPalette();
+    TheoryPalette();
 
     /**
-     * @brief ABS's copy constructor. Creates a 'unique' shared pointer from the old one
-     * as we don't want it to point to the previous instantiation's 'colours'.
+     * @brief Populates the colours vector.
+     * @param oldVec The vector of ofColors that is to be copied.
      */
-    ColourPalette(const ColourPalette & old): colours(make_shared<ColVec>(*old.colours)) {}
-
-    /**
-     * @brief ABS's assignment operator. Creates a 'unique' shared pointer from the old one
-     * as we don't want it to point to the previous instantiation's 'colours'.
-     */
-    void operator = (const ColourPalette & old) {
-      colours = make_shared<ColVec>(*old.colours);
-    }
+    void populatePalette(const ColVec & oldVec);
 
     /**
      * @brief Generic colour scheme getter. Returns a shared pointer to the colour scheme itself.
@@ -137,7 +126,6 @@ class ColourPalette {
      * @return The new colour, post-operation.
      */
     static ofColor adjustHue(ofColor & col, int percent);
-
 };
 
-#endif /* defined(____ColourPalette__) */
+#endif /* defined(____TheoryPalette__) */

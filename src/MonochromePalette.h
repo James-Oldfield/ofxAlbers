@@ -8,9 +8,9 @@
 #define ____MonochromePalette__
 
 #include "ofMain.h"
-#include "ColourPalette.h"
+#include "TheoryPalette.h"
 
-class MonochromePalette: public ColourPalette {
+class MonochromePalette: public TheoryPalette {
   private:
     int satDif; //!< difference between the Saturation of the colours.
     int briDif; //!< difference between the Brightness of the colours.

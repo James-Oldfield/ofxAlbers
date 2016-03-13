@@ -1,6 +1,6 @@
 /**
  * @class ComplimentaryPalette
- * @brief Functionality for constructing and manipulating Complimentary colour schemes.
+ * @brief Represents a Complimentaryic colour scheme.
  * @author James Oldfield.
  */
 
@@ -8,9 +8,9 @@
 #define ____ComplimentaryPalette__
 
 #include "ofMain.h"
-#include "ColourPalette.h"
+#include "TheoryPalette.h"
 
-class ComplimentaryPalette: public ColourPalette {
+class ComplimentaryPalette: public TheoryPalette {
   private:
   public:
 
