@@ -1,9 +1,11 @@
-#pragma once
+pragma once
 
 #include "ofMain.h"
 #include "AnalogousPalette.h"
 #include "MonochromePalette.h"
 #include "TriadPalette.h"
+#include "ColourPalette.h"
+#include "DribbblePalette.h"
 
 class ofApp : public ofBaseApp{
 
@@ -28,6 +30,7 @@ class ofApp : public ofBaseApp{
     MonochromePalette newMono;
     AnalogousPalette anal;
     TriadPalette triad;
+    DribbblePalette drib;
 
     bool flag = false;
 

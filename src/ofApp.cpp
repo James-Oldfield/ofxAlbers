@@ -9,7 +9,8 @@ void ofApp::setup(){
   ofColor b = ofColor(0, 0, 255);
   
   //triad.createPalette(r);
-  cols = anal.createPalette(g);
+  // cols = anal.createPalette(g);
+  cols = drib.createPalette("https://dribbble.com/shots/");
 }
 
 //--------------------------------------------------------------

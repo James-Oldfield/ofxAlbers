@@ -12,8 +12,6 @@
 
 class TheoryPalette : public ColourPalette {
   protected:
-    ofColor seedColour = ofColor(255, 255, 255); //!< the base colour with which to generate a scheme from.
-
     /**
      * @brief Abstract virtual class which provides the interface to creating a colour scheme from a seed colour.
      * @param _seedColour The ofColor seed/base colour with which to construct the palette from.
@@ -34,18 +32,6 @@ class TheoryPalette : public ColourPalette {
      * @param oldVec The vector of ofColors that is to be copied.
      */
     void populatePalette(const ColVec & oldVec);
-
-    /**
-     * @brief Generic colour scheme getter. Returns a shared pointer to the colour scheme itself.
-     * @return a shared pointer to the vector of ofColours.
-     */
-    SharedPtrColVec getPalette() const;
-
-    /**
-     * @brief Used to sort the palette of colours based on chosen channel.
-     * @param channel The channel to sort by.
-     */
-    void sortPalette(string channel = "hue");
 
     /**
      * @brief Generate a random colour scheme. Useful for quickly generating pleasing colours to use.
