@@ -13,8 +13,6 @@
 class AnalogousPalette: public TheoryPalette {
   private:
     int angDif; //!< difference between the hue values, angle-wise, in the colour scheme.
-    int b;      //!< brightness of the colour
-    int s;      //!< saturation of the colour
   public:
 
     /**
@@ -36,7 +34,7 @@ class AnalogousPalette: public TheoryPalette {
      * @param _b The brightness of the colour.
      * @param _s The saturation of the colour.
      */
-    AnalogousPalette(int _angDif = 15, int _b = 255, int _s = 255);
+    AnalogousPalette(int _angDif = 15);
     ~AnalogousPalette();
 
     AnalogousPalette(const AnalogousPalette & old);

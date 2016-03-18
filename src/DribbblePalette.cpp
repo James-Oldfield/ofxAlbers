@@ -32,17 +32,17 @@ SharedPtrColVec DribbblePalette::createPalette(const string & _url) {
     GumboOutput* output = gumbo_parse(res.data.getText().c_str());
     searchForCols(output->root, res.data.getText(), "color");
     gumbo_destroy_output(&kGumboDefaultOptions, output);
-
-    if(colours->size() == 0) cout << "There was an error scraping Dribbble, perhaps they've changed their HTML structure... Returning an empty palette." << endl;
   } catch (Poco::Net::DNSException) {
     cout << "host not found!" << endl;
   } catch (...) {
     cout << "Error loading palette from Url." << endl;
     cout << "Is your connection working / is the url to the Dribbble shot correct?" << endl;
   }
+
+    if(colours->size() == 0) cout << "There was an error scraping Dribbble. Returning an empty palette." << endl;
     return colours;
 }
 
 DribbblePalette::DribbblePalette() {};
 
-DribbblePalette::~DribbblePalette() { cout << "destructor" << endl; };
+DribbblePalette::~DribbblePalette() {};

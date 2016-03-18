@@ -10,14 +10,19 @@ SharedPtrColVec ComplimentaryPalette::createPalette(const ofColor & _seedColour)
 
   ang = ofMap(ang, 0, 360, 0, 255); // map from angle to HSB colour space min and max.
 
-  float compHue = ofWrap(ang + 255, 0, 255); // The complimentary hue's colour.
+  float compHue = ofWrap(ang + 127.5, 0, 255); // The complimentary hue's colour.
 
   colours->push_back( ofColor::fromHsb( ang, s, b ) );
-  colours->push_back( ofColor::fromHsb( ang, ofWrap(s + 15, 0, 255), b ) );
-  colours->push_back( ofColor::fromHsb( ang, ofWrap(s - 15, 0, 255), b ) );
-  colours->push_back( ofColor::fromHsb( compHue, s, b ) );
-  colours->push_back( ofColor::fromHsb( compHue, ofWrap(s + 15, 0, 255), b ) );
-  colours->push_back( ofColor::fromHsb( compHue, ofWrap(s - 15, 0, 255), b ) );
+  colours->push_back( ofColor::fromHsb( ang, ofWrap(s + 15, 0, 255), ofWrap(b + 15, 0, 255) ) );
+  colours->push_back( ofColor::fromHsb( ang, ofWrap(s - 15, 0, 255), ofWrap(b - 15, 0, 255) ) );
+  colours->push_back( ofColor::fromHsb( compHue, ofWrap(s + 15, 0, 255), ofWrap(b + 15, 0, 255) ) );
+  colours->push_back( ofColor::fromHsb( compHue, ofWrap(s - 15, 0, 255), ofWrap(b - 15, 0, 255) ) );
+
+  cout << colours->at(0) << endl;
+  cout << colours->at(1) << endl;
+  cout << colours->at(2) << endl;
+  cout << colours->at(3) << endl;
+  cout << colours->at(4) << endl;
 
   return colours;
 }

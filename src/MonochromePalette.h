@@ -41,7 +41,7 @@ class MonochromePalette: public TheoryPalette {
      * @param _satDif The amount to space out the colours by.
      * @param _b The brightness of the colour.
      */
-    MonochromePalette(int _satDif = 15, int _briDif = 15);
+    MonochromePalette(int _satDif = 25, int _briDif = 25);
     ~MonochromePalette();
 
     MonochromePalette(const MonochromePalette & old);

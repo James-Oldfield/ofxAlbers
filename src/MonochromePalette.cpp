@@ -9,11 +9,11 @@ SharedPtrColVec MonochromePalette::createPalette(const ofColor & _seedColour) {
   float bri = seedColour.getBrightness(); // ^ Ditto brightness.
 
   // Push back the angles based on satDif.
-  satBri.push_back(ofVec2f(ofWrap(sat-satDif*2, 0, 255), ofWrap(bri-briDif, 0, 255)));
+  satBri.push_back(ofVec2f(ofWrap(sat-satDif*2, 0, 255), ofWrap(bri-briDif*2, 0, 255)));
   satBri.push_back(ofVec2f(ofWrap(sat-satDif, 0, 255), ofWrap(bri-briDif, 0, 255)));
   satBri.push_back(ofVec2f(ofWrap(sat, 0, 255), ofWrap(bri-briDif, 0, 255)));
-  satBri.push_back(ofVec2f(ofWrap(sat+satDif, 0, 255), ofWrap(bri-briDif, 0, 255)));
-  satBri.push_back(ofVec2f(ofWrap(sat+satDif*2, 0, 255), ofWrap(bri-briDif, 0, 255)));
+  satBri.push_back(ofVec2f(ofWrap(sat+satDif, 0, 255), ofWrap(bri+briDif, 0, 255)));
+  satBri.push_back(ofVec2f(ofWrap(sat+satDif*2, 0, 255), ofWrap(bri+briDif*2, 0, 255)));
 
   // If colour vector is already populated, simply edit existing colours.
   // Else simply push new colours back.
