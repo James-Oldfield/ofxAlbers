@@ -55,7 +55,6 @@ ofColor ColourPalette::darken(ofColor & col, unsigned int percent) {
 }
 
 ofColor ColourPalette::lighten(ofColor & col, unsigned int percent) {
-  cout << "lighten\n";
   float oldBri = col.getBrightness();
   col.setBrightness( ofClamp( oldBri + ( 255 * ( percent * .01  ) ), 0, 255 ) );
 

@@ -37,7 +37,7 @@ void MonochromePalette::setBrightnessDif(const int & _briDif) {
 }
 
 MonochromePalette::MonochromePalette(int _satDif, int _briDif): TheoryPalette(), satDif(_satDif), briDif(_briDif) {};
-MonochromePalette::~MonochromePalette() { cout << "destructor" << endl; };
+MonochromePalette::~MonochromePalette() {};
 
   /**
    * @brief MonochromePalette's copy constructor. Creates a 'unique' shared pointer from the old one

@@ -1,2 +1,0 @@
-ofxGumbo
-ofxDatGui

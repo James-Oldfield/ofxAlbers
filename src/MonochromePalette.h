@@ -38,8 +38,8 @@ class MonochromePalette: public TheoryPalette {
     /**
      * @brief Construct a Monochrome Palette object and set relevant vars.
      * 
-     * @param _satDif The amount to space out the colours by.
-     * @param _b The brightness of the colour.
+     * @param _satDif The amount to space out the saturation by.
+     * @param _briDif The amount to space out the brightness by.
      */
     MonochromePalette(int _satDif = 25, int _briDif = 25);
     ~MonochromePalette();

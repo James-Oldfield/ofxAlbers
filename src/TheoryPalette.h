@@ -35,7 +35,6 @@ class TheoryPalette : public ColourPalette {
 
     /**
      * @brief Generate a random colour scheme. Useful for quickly generating pleasing colours to use.
-     * @param channel The channel to sort by.
      */
     SharedPtrColVec generateRandom();
 };

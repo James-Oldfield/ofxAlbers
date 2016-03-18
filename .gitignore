@@ -1,6 +1,8 @@
-*xcodeproj*
-bin/
-!bin/data/
+bin/*
+!*/bin/data/
 obj/*
 *.py
 *.pyc
+html/
+latex/
+Doxyfile

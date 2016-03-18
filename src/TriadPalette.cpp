@@ -33,7 +33,7 @@ SharedPtrColVec TriadPalette::createPalette(const ofColor & _seedColour) {
 }
 
 TriadPalette::TriadPalette(): TheoryPalette() {};
-TriadPalette::~TriadPalette() { cout << "destructor" << endl; };
+TriadPalette::~TriadPalette() {};
 
 
   /**

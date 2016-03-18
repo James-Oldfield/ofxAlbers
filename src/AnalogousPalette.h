@@ -31,12 +31,14 @@ class AnalogousPalette: public TheoryPalette {
     /**
      * @brief Construct an Analogous Palette object and set relevant vars.
      * @param _angDif The amount to space out the colours by.
-     * @param _b The brightness of the colour.
-     * @param _s The saturation of the colour.
      */
     AnalogousPalette(int _angDif = 15);
     ~AnalogousPalette();
 
+    /**
+     * @brief AnalogousPalette's copy constructor.
+     * @param old A reference to the old palette to copy over.
+     */
     AnalogousPalette(const AnalogousPalette & old);
 
 };
