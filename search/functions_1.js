@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['colourpalette',['ColourPalette',['../class_colour_palette.html#a9dc67d33c5ca47e87c25fee82e8ba874',1,'ColourPalette::ColourPalette()'],['../class_colour_palette.html#a4fb0d3b7cc325f034acb8621efca3b06',1,'ColourPalette::ColourPalette(const ColourPalette &amp;old)']]],
+  ['complimentarypalette',['ComplimentaryPalette',['../class_complimentary_palette.html#a9ec74eb60b0c746e761c7700b17ae56c',1,'ComplimentaryPalette::ComplimentaryPalette()'],['../class_complimentary_palette.html#a106ae11a4c5f77ced711f3cf643abd18',1,'ComplimentaryPalette::ComplimentaryPalette(const ComplimentaryPalette &amp;old)']]],
+  ['createpalette',['createPalette',['../class_analogous_palette.html#a754b224998c7d9aadc112e42678b6811',1,'AnalogousPalette::createPalette()'],['../class_complimentary_palette.html#aaf28aa4de5a279a03e2cb5af77768705',1,'ComplimentaryPalette::createPalette()'],['../class_dribbble_palette.html#ac93593b747d6e1ccfaecb4492efc9089',1,'DribbblePalette::createPalette()'],['../class_monochrome_palette.html#a06b37d8b0f32d80d5ae8482a098fdda7',1,'MonochromePalette::createPalette()'],['../class_theory_palette.html#aaf643b588179a7d443fa82a99019e394',1,'TheoryPalette::createPalette()'],['../class_triad_palette.html#a61885bc924fd846ce62ee8bb33a3ee93',1,'TriadPalette::createPalette()']]]
+];
