@@ -2,6 +2,7 @@ ofxAlbers
 ===========================
 ## what
 **ofxAlbers** is an addon for OpenFrameworks providing an easy interface to creating colour palettes - either by scrapping a Dribbble shot or via more traditional Colour Theory.
+Has an [ofxGumbo](https://github.com/bakercp/ofxGumbo) dependency for parsing HTML from Dribbble.
 
 ### [Full docs](http://james-oldfield.github.io/ofxAlbers)
 
